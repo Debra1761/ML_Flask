@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}  Prediction {% endblock %}
+{% block something %}  
+<html>
+
+    <body bgcolor=#a3cfb4>
+    
+        <center>
+    <div style="background-color:yellowgreen;">
+            <h3>  PREDICTION :  </h3>
+
+            <br>
+            <br>
+
+        
+        {% if data == "unrelated" %}
+        <h3> The stance is <h3> <br>
+            <h1>UNRELATED</h1>  
+         
+            {% elif data == "disagree" %} 
+            <h3> The stance is <h3> <br>
+                <h1>DISAGREE</h1> 
+
+            {% elif data == "discuss" %} 
+            <h3> The stance is <h3> <br>
+                <h1>DISCUSS</h1> 
+
+        {%else%}
+        <h1>AGREE</h1>
+        
+        
+        {%endif%}
+    
+            <br>
+            
+
+        <a  class="btn btn-outline-success my-2 my-sm-0" href='/home' type="submit">back</a>
+    
+        </center>
+    </div>
+    
+    </body>
+    
+    </html>
+
+    {% endblock %}

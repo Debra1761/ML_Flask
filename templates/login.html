@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}   LOGIN PAGE  {% endblock %}
+{% block something %} 
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<html>
+        <body bgcolor = #d4a3ae>
+            <center>
+                    <h2> <p> LOGIN </p> </h2> <br>
+
+                    <form method="POST", action ="{{url_for("login")}}" >
+                <p>Name:</p>
+                <p> <input type="text" name="nm"/> </p> <br>
+                <p> <input type="submit" value="submit"/> </p> <br>
+
+
+             </form>
+        </center>
+    </body>
+</html>
+{% endblock %}
+
+
+

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}   Stance {% endblock %}
+{% block content %}  
+    
+<html>
+    <body bgcolor = #d4a3ae>
+        <center>
+           <h2> <p> STANCE DETECTION!! </p> </h2> <br>
+                
+                 <form method="POST", action ="{{url_for("predictstance")}}" >
+
+                    <b>
+                        Headline: <input type="text" , name="a" , placeholder ="enter 1"> <br> <br> </input>
+                        Content: <input type="text" , name="b" , placeholder ="enter 2"> <br> <br> </input>
+
+                    </b>
+                    <br> 
+                    <input type="submit" , value="predict"
+
+                    <img src="static\dj.jpg" alt=""> 
+
+
+                </form>
+
+        </center>
+    </body>
+</html>
+    
+{% endblock %}

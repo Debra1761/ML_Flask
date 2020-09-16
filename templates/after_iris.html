@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}  Prediction {% endblock %}
+{% block something %}  
+<html>
+
+    <body bgcolor=#a3cfb4>
+    
+        <center>
+    
+            <h3>  PREDICTION :  </h3>
+        
+        {%if data == 0%}
+        <h1>Iris-setosa</h1>  
+        <img src='static\setosa.jpg'>  
+    
+        {%else%}
+        <h1>Iris-versicolor</h1>
+        <img src='static\verci.jpg'>
+        
+        {%endif%}
+    
+            <br><br>
+
+        <a  class="btn btn-outline-success my-2 my-sm-0" href='/home' type="submit">back</a>
+    
+        </center>
+    
+    </body>
+    
+    </html>
+
+    {% endblock %}
